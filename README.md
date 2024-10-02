@@ -68,6 +68,7 @@ BehaviorTree를 사용해 보스전투 구현.
 복귀 시점에 공격 종료 상태로 만들어 애니메이션이 완전히 종료 되기전 다음 액션으로 넘어갈 수 있게 처리
 
 어빌리티마다 태그를 부여하고 ActivationRequiredTags를 설정해 실행조건을 판단.
+
 [AbilityTags / ActivationRequiredTags]
 [Attack.Light.1 /  None ]
 [Attack.Light.2 /  Attack.Light.1 ]
@@ -211,26 +212,21 @@ BehaviorTree기반으로 AI를 구현.
 각 거리에 해당하는 스킬을 여러개 배치해 순차적으로 실행하여 다양한 전투 구현.
 주기적으로 플레이어와 거리를 벌려 근접, 원거리 전투를 번갈아가며 경험하게 구현.
 
+BT 전체
 ![AI_All](https://github.com/user-attachments/assets/b88c0648-6afd-49d6-8621-95dcc24d1e78)
 
-BT 전체
-
+인트로
 ![AI_Intro](https://github.com/user-attachments/assets/df4306d4-4eda-44d0-8bf2-0d3834bf693a)
 
-인트로
-
+근거리
 ![AI_Short](https://github.com/user-attachments/assets/e6773ae0-31fa-4355-bce1-2286a07d9e91)
 
-근거리
-
+원거리 1
 ![AI_Long_Left](https://github.com/user-attachments/assets/b0e08a50-a5f9-4da0-acf0-0ef22bc3ecdf)
 
-원거리 1
-
+원거리 2
 ![AI_Long_Right](https://github.com/user-attachments/assets/86f37187-cff2-434c-ade7-5e687ba88e2e)
 
-원거리 2
-
+엄청 멀때
 ![AI_LongLong](https://github.com/user-attachments/assets/bc0df45b-bf13-43ea-83bb-93120cb36bbe)
 
-엄청 멀때
