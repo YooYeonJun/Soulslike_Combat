@@ -2,9 +2,7 @@
 https://www.youtube.com/watch?v=5rWJYEPz2hc
 
 # 목표
-
 ---
-
 플레이어와 보스간의 **전투** 구현.
 
 # 구현 개요
