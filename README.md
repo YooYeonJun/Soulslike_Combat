@@ -60,13 +60,13 @@ BehaviorTree를 사용해 보스전투 구현.
 
 ## 1. 어빌리티
 
-### 공격
+### 1.1 공격
 
 `UGTGameplayAbility_MontageAttack`
 
 어빌리티 시작시 몽타주를 재생하고 공격 이벤트를 수신받아 처리한다.
 
-### 콤보
+### 1.2 콤보
 
 [![Video Label](http://img.youtube.com/vi/n73wdq9_Ois/0.jpg)](https://youtu.be/n73wdq9_Ois)
 
@@ -92,7 +92,7 @@ BehaviorTree를 사용해 보스전투 구현.
 
 [Attack.Light.4 /  Attack.Light.3 ]
 
-### 닷지
+### 1.3 닷지
 
 [![Video Label](http://img.youtube.com/vi/gG2GezGSreo/0.jpg)](https://youtu.be/gG2GezGSreo)
 
@@ -104,7 +104,7 @@ BehaviorTree를 사용해 보스전투 구현.
 
 ApplyRootMotionTask를 사용하여 캐릭터를 이동시킨다.
 
-### 가드와 패링
+### 1.4 가드와 패링
 
 [![Video Label](http://img.youtube.com/vi/xwJz1_U-2IE/0.jpg)](https://youtu.be/xwJz1_U-2IE)
 
@@ -121,7 +121,7 @@ ApplyRootMotionTask를 사용하여 캐릭터를 이동시킨다.
 
 패링을 했다면 재입력시 바로 패링가능 상태로 만든다.
 
-### 그로기 및 처형
+### 1.5 그로기 및 처형
 
 [![Video Label](http://img.youtube.com/vi/un50ikkDANI/0.jpg)](https://youtu.be/un50ikkDANI)
 
@@ -141,14 +141,16 @@ ApplyRootMotionTask를 사용하여 캐릭터를 이동시킨다.
 
 처형 어빌리티가 그로기 액터를 이벤트로 넘겨받아 처형시킨다.
 
-### 히트 리액션
+### 1.6 히트 리액션
 
 `Source/GASToy/AbilitySystem/Ability/HitReaction`
 
 히트 리액션을 기능별로 하나의 객체로 만들어 다양한 조합을 할 수 있게 만듬. 
 
 `ApplyRootMotion` : 넉백, 에어본
+
 `PlayMontage` : 피격, 에어본
+
 `TimeDilation` : 슬로우 효과
 
 ## 2. 데미지 처리
