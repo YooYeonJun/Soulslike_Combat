@@ -48,8 +48,6 @@ BehaviorTree를 사용해 보스전투 구현.
 
 # 구현 상세
 
----
-
 ## 1. 어빌리티
 
 ### 공격
@@ -60,7 +58,7 @@ BehaviorTree를 사용해 보스전투 구현.
 
 ### 콤보
 
-https://youtu.be/n73wdq9_Ois
+[![Video Label](http://img.youtube.com/vi/'n73wdq9_Ois'/0.jpg)](https://youtu.be/'n73wdq9_Ois')
 
 ![공격 몽타주.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8bfea7e2-8b1c-4494-a611-6e709ccd1821/8cdff32b-208c-4cb4-bbc8-e08e77e0c309/%EA%B3%B5%EA%B2%A9_%EB%AA%BD%ED%83%80%EC%A3%BC.png)
 
