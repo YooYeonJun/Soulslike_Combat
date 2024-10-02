@@ -23,29 +23,37 @@ EnhancedInput사용, 조작감 향상을 위한 선입력 시스템 구현`AGTPl
 ## 캐릭터 이동 및 카메라 제어
 
 캐릭터 상태 (걷기, 달리기, 락온중) 에 따라 이동 속도, 캐릭터 회전, 카메라 제어를 관리.
+
 `UGTMovementControlComponent`
 
 ## 충돌처리
 
-무기와 캐릭터의 정밀한 충돌검사를 위한 시스템 구현 /`UGTCollisionCheckComponent`
+무기와 캐릭터의 정밀한 충돌검사를 위한 시스템 구현 / `UGTCollisionCheckComponent`
+
 다수 발사체가 중복 충돌시 한번의 이벤트만 발생하기 위한 관리자 구현 /`UGTCollisionSubsystem`
 
 ## 데미지 처리
 
 데미지를 가할때 가드, 패링 가능 유무 및 피격자 상태를 파악해 막기 결과를 도출.
+
 결과에 따라서 이펙트, 히트리액션, 데미지, 그로기 수치등 일련의 처리를 구현.
+
 `UGTGameplayAbility::ApplyDamage`
 
 ## 애니메이션
 
 캐릭터의 상태에 따라 블렌드 스페이스, 몽타주 재생
+
 노티파이를 활용하여 애니메이션에 기반한 게임플레이 구현.
+
 `Source/GASToy/Animation`
 
 ## AI
 
 BehaviorTree를 사용해 보스전투 구현.
+
 근접공격, 대쉬공격, 원거리 공격등을 거리기반으로 적절하게 구성.
+
 `Source/GASToy/AI`
 
 # 구현 상세
