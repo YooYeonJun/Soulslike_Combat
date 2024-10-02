@@ -5,9 +5,6 @@ https://www.youtube.com/watch?v=5rWJYEPz2hc
 플레이어와 보스간의 **전투** 구현.
 
 # 구현 개요
-
----
-
 GameplayAbilitySystem기반으로 구현.
 모든 기능은 C++로 작성. UI, AnimBP는 제외
 블루프린트는 프로퍼티 값만 할당하는 용도로 사용.
