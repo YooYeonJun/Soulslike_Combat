@@ -107,7 +107,7 @@ ApplyRootMotionTask를 사용하여 캐릭터를 이동시킨다.
 
 `UGTGameplayAbility_ScanGroggy`
 
-그로기 수치가 최대가 되면 그로기 상태가 된다. 이때 조작과 다른 어빌리티 실행을 할 수 없다. : 영상: 처형시 캐릭터 워프까지 되도록 
+그로기 수치가 최대가 되면 그로기 상태가 된다. 이때 조작과 다른 어빌리티 실행을 할 수 없다.
 
 스캔 그로기 어빌리티가 주기적으로 그로기 액터를 찾는다.
 찾았고 공격버튼을 누르면 처형을 시작한다.
@@ -126,7 +126,7 @@ ApplyRootMotionTask를 사용하여 캐릭터를 이동시킨다.
 
 ## 2. 데미지 처리
 
-![DamageData.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8bfea7e2-8b1c-4494-a611-6e709ccd1821/78e54f0d-ec40-47c0-8b54-29927df9e310/DamageData.png)
+![DamageData](https://github.com/user-attachments/assets/a52b3553-faea-4807-8d4f-523e52106682)
 
 `UGTGameplayAbility::ApplyDamage`
 
@@ -211,26 +211,26 @@ BehaviorTree기반으로 AI를 구현.
 각 거리에 해당하는 스킬을 여러개 배치해 순차적으로 실행하여 다양한 전투 구현.
 주기적으로 플레이어와 거리를 벌려 근접, 원거리 전투를 번갈아가며 경험하게 구현.
 
-![BT 전체](https://prod-files-secure.s3.us-west-2.amazonaws.com/8bfea7e2-8b1c-4494-a611-6e709ccd1821/ef2b62cf-8756-454b-b6f6-9a3cdf545545/AI_All.png)
+![AI_All](https://github.com/user-attachments/assets/b88c0648-6afd-49d6-8621-95dcc24d1e78)
 
 BT 전체
 
-![인트로](https://prod-files-secure.s3.us-west-2.amazonaws.com/8bfea7e2-8b1c-4494-a611-6e709ccd1821/f17a4766-fd8c-44f3-8b8e-543ca6fbc018/AI_Intro.png)
+![AI_Intro](https://github.com/user-attachments/assets/df4306d4-4eda-44d0-8bf2-0d3834bf693a)
 
 인트로
 
-![근거리](https://prod-files-secure.s3.us-west-2.amazonaws.com/8bfea7e2-8b1c-4494-a611-6e709ccd1821/d683a5b2-4e7d-4366-ab55-ffe1aa37ea65/AI_Short.png)
+![AI_Short](https://github.com/user-attachments/assets/e6773ae0-31fa-4355-bce1-2286a07d9e91)
 
 근거리
 
-![원거리 1](https://prod-files-secure.s3.us-west-2.amazonaws.com/8bfea7e2-8b1c-4494-a611-6e709ccd1821/1d820491-8001-4f4f-b8af-e5ff938e33db/AI_Long_Left.png)
+![AI_Long_Left](https://github.com/user-attachments/assets/b0e08a50-a5f9-4da0-acf0-0ef22bc3ecdf)
 
 원거리 1
 
-![원거리 2](https://prod-files-secure.s3.us-west-2.amazonaws.com/8bfea7e2-8b1c-4494-a611-6e709ccd1821/db9ad63e-61a8-4586-bd8b-df01fcf980d5/AI_Long_Right.png)
+![AI_Long_Right](https://github.com/user-attachments/assets/86f37187-cff2-434c-ade7-5e687ba88e2e)
 
 원거리 2
 
-![엄청 멀때](https://prod-files-secure.s3.us-west-2.amazonaws.com/8bfea7e2-8b1c-4494-a611-6e709ccd1821/08ff573f-84e0-4dde-9a0d-f4a9abaa2a7f/AI_LongLong.png)
+![AI_LongLong](https://github.com/user-attachments/assets/bc0df45b-bf13-43ea-83bb-93120cb36bbe)
 
 엄청 멀때
