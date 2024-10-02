@@ -70,9 +70,13 @@ BehaviorTree를 사용해 보스전투 구현.
 어빌리티마다 태그를 부여하고 ActivationRequiredTags를 설정해 실행조건을 판단.
 
 [AbilityTags / ActivationRequiredTags]
+
 [Attack.Light.1 /  None ]
+
 [Attack.Light.2 /  Attack.Light.1 ]
+
 [Attack.Light.3 /  Attack.Light.2 ]
+
 [Attack.Light.4 /  Attack.Light.3 ]
 
 ### 닷지
