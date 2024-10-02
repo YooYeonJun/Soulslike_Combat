@@ -14,11 +14,14 @@ GameplayAbilitySystem기반으로 구현.
 ## 어빌리티
 
 공격, 구르기, 막기 등 각종 액션
+
 `Source/GASToy/AbilitySystem/Ability`
 
 ## 입력
 
-EnhancedInput사용, 조작감 향상을 위한 선입력 시스템 구현`AGTPlayerCharacter::OnAbilityInputActionPressed`
+EnhancedInput사용, 조작감 향상을 위한 선입력 시스템 구현
+
+`AGTPlayerCharacter::OnAbilityInputActionPressed`
 
 ## 캐릭터 이동 및 카메라 제어
 
