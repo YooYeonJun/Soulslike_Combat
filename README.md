@@ -1,5 +1,5 @@
 # Soulslike_Combat
-https://www.youtube.com/watch?v=5rWJYEPz2hc
+[![Video Label](http://img.youtube.com/vi/5rWJYEPz2hc/0.jpg)](https://youtu.be/5rWJYEPz2hc)
 
 # 목표
 플레이어와 보스간의 **전투** 구현.
