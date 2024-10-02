@@ -76,7 +76,7 @@ BehaviorTree를 사용해 보스전투 구현.
 
 ### 닷지
 
-https://youtu.be/gG2GezGSreo
+[![Video Label](http://img.youtube.com/vi/gG2GezGSreo/0.jpg)](https://youtu.be/gG2GezGSreo)
 
 `UGTGameplayAbility_Dodge`
 
@@ -86,7 +86,7 @@ ApplyRootMotionTask를 사용하여 캐릭터를 이동시킨다.
 
 ### 가드와 패링
 
-https://youtu.be/xwJz1_U-2IE
+[![Video Label](http://img.youtube.com/vi/xwJz1_U-2IE/0.jpg)](https://youtu.be/xwJz1_U-2IE)
 
 `UGTGameplayAbility_GuardAndParry`
 
@@ -99,7 +99,7 @@ https://youtu.be/xwJz1_U-2IE
 
 ### 그로기 및 처형
 
-https://youtu.be/un50ikkDANI
+[![Video Label](http://img.youtube.com/vi/un50ikkDANI/0.jpg)](https://youtu.be/un50ikkDANI)
 
 `UGTGameplayAbility_Execute`
 
@@ -164,7 +164,7 @@ https://youtu.be/un50ikkDANI
 
 ## 5. 충돌 처리
 
-https://youtu.be/isbs40ilnK8
+[![Video Label](http://img.youtube.com/vi/isbs40ilnK8/0.jpg)](https://youtu.be/isbs40ilnK8)
 
 `UGTCollisionCheckComponent`
 
