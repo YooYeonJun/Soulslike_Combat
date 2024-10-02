@@ -60,7 +60,7 @@ BehaviorTree를 사용해 보스전투 구현.
 
 [![Video Label](http://img.youtube.com/vi/n73wdq9_Ois/0.jpg)](https://youtu.be/n73wdq9_Ois)
 
-![공격 몽타주.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8bfea7e2-8b1c-4494-a611-6e709ccd1821/8cdff32b-208c-4cb4-bbc8-e08e77e0c309/%EA%B3%B5%EA%B2%A9_%EB%AA%BD%ED%83%80%EC%A3%BC.png)
+![공격 몽타주](https://github.com/user-attachments/assets/04973618-b1a1-41a1-bff4-143b9d86c8a1)
 
 공격 애니메이션은 크게 3단계로 구성되어 있다.
 준비 → 공격 → 복귀
