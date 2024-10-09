@@ -13,7 +13,7 @@ GameplayAbilitySystem기반으로 구현.
 
 ## 어빌리티
 
-공격, 구르기, 막기 등 각종 액션
+공격, 구르기, 막기, 패링, 처형 등 각종 액션
 
 `Source/GASToy/AbilitySystem/Ability`
 
