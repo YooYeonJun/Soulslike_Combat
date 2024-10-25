@@ -61,7 +61,9 @@ UMotionWarpingComponent* UGTGameplayAbility::GetMotionWarpingComponentFromAvatar
 	return nullptr;
 }
 
-void UGTGameplayAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData)
+void UGTGameplayAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle,
+	const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo,
+	const FGameplayEventData* TriggerEventData)
 {
 	Super::ActivateAbility(Handle, ActorInfo, ActivationInfo, TriggerEventData);
 }
@@ -85,7 +87,7 @@ void UGTGameplayAbility::InitAbilityTag(const FGameplayTag Tag, const bool bSetT
 	{
 		FAbilityTriggerData TriggerData;
 		TriggerData.TriggerTag = Tag;
-		AbilityTriggers.Add(TriggerData);	
+		AbilityTriggers.Add(TriggerData);
 	}
 }
 
@@ -102,7 +104,7 @@ void UGTGameplayAbility::ApplyDamage(const FGameplayEventData& EventData)
 
 	UAbilitySystemComponent* AttackerASC = UAbilitySystemGlobals::GetAbilitySystemComponentFromActor(EventData.Instigator);
 	check(AttackerASC);
-	
+
 	UAbilitySystemComponent* VictimASC = UAbilitySystemGlobals::GetAbilitySystemComponentFromActor(EventData.Target);
 	check(VictimASC);
 
@@ -128,22 +130,23 @@ void UGTGameplayAbility::ApplyDamage(const FGameplayEventData& EventData)
 		if (!VictimASC->HasMatchingGameplayTag(GTGameplayTags::Character_State_Immunity_Damage))
 		{
 			FGameplayTag GameplayCueTag;
-            if (BlockingResultTag.MatchesTag(GTGameplayTags::BlockingResult_Failure))
-            {
-            	GameplayCueTag = DamageData.BlockingFailureGameplayCueTag;
-            }
-            else if (BlockingResultTag.MatchesTag(GTGameplayTags::BlockingResult_Success_Guard))
-            {
-            	GameplayCueTag = DamageData.GuardSuccessGameplayCueTag;
-            }
-            else if (BlockingResultTag.MatchesTag(GTGameplayTags::BlockingResult_Success_Parry))
-            {
-            	GameplayCueTag = DamageData.ParrySuccessGameplayCueTag;
-            }
-			
+			if (BlockingResultTag.MatchesTag(GTGameplayTags::BlockingResult_Failure))
+			{
+				GameplayCueTag = DamageData.BlockingFailureGameplayCueTag;
+			}
+			else if (BlockingResultTag.MatchesTag(GTGameplayTags::BlockingResult_Success_Guard))
+			{
+				GameplayCueTag = DamageData.GuardSuccessGameplayCueTag;
+			}
+			else if (BlockingResultTag.MatchesTag(GTGameplayTags::BlockingResult_Success_Parry))
+			{
+				GameplayCueTag = DamageData.ParrySuccessGameplayCueTag;
+			}
+
 			if (GameplayCueTag.IsValid())
 			{
-				FGameplayEffectContextHandle EffectContextHandle = MakeEffectContext(GetCurrentAbilitySpecHandle(), GetCurrentActorInfo());
+				FGameplayEffectContextHandle EffectContextHandle = MakeEffectContext(GetCurrentAbilitySpecHandle(),
+					GetCurrentActorInfo());
 
 				const FHitResult HitResult = UAbilitySystemBlueprintLibrary::GetHitResultFromTargetData(EventData.TargetData, 0);
 				EffectContextHandle.AddHitResult(HitResult);
@@ -155,7 +158,7 @@ void UGTGameplayAbility::ApplyDamage(const FGameplayEventData& EventData)
 				UGameplayCueFunctionLibrary::ExecuteGameplayCueOnActor(Victim, GameplayCueTag, CueParams);
 			}
 		}
-		
+
 		// 히트리액션처리
 		for (const FGTHitReactionDesc& HitReactionDesc : DamageData.HitReactionDescs)
 		{
@@ -166,8 +169,7 @@ void UGTGameplayAbility::ApplyDamage(const FGameplayEventData& EventData)
 				check(HitReactionDesc.Info);
 				FGameplayEventData HitReactionEventData = EventData;
 				HitReactionEventData.OptionalObject = HitReactionDesc.Info;
-				UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(Victim, HitReactionDesc.Info->ReactionTriggerTag,
-					HitReactionEventData);
+				UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(Victim, HitReactionDesc.Info->ReactionTriggerTag,HitReactionEventData);
 			}
 		}
 
@@ -182,10 +184,11 @@ void UGTGameplayAbility::ApplyDamage(const FGameplayEventData& EventData)
 	VictimASC->RemoveLooseGameplayTag(BlockingResultTag);
 }
 
-void UGTGameplayAbility::WaitEvent_ApplyDamage(FGameplayTag EventTag, AActor* OptionalExternalTarget, bool OnlyTriggerOnce, bool OnlyMatchExact)
+void UGTGameplayAbility::WaitEvent_ApplyDamage(FGameplayTag EventTag, AActor* OptionalExternalTarget,
+	bool OnlyTriggerOnce, bool OnlyMatchExact)
 {
 	UAbilityTask_WaitGameplayEvent* Task = UAbilityTask_WaitGameplayEvent::WaitGameplayEvent(
-	this, EventTag, OptionalExternalTarget, OnlyTriggerOnce, OnlyMatchExact);
+		this, EventTag, OptionalExternalTarget, OnlyTriggerOnce, OnlyMatchExact);
 
 	Task->EventReceived.AddUniqueDynamic(this, &ThisClass::OnEventReceived_ApplyDamage);
 	Task->ReadyForActivation();
@@ -196,7 +199,8 @@ void UGTGameplayAbility::OnEventReceived_ApplyDamage(FGameplayEventData EventDat
 	ApplyDamage(EventData);
 }
 
-FGameplayTag UGTGameplayAbility::CheckBlocking(const FGameplayTag IgnoreGuardTag, const UAbilitySystemComponent* VictimASC)
+FGameplayTag UGTGameplayAbility::CheckBlocking(const FGameplayTag IgnoreGuardTag,
+	const UAbilitySystemComponent* VictimASC)
 {
 	check(VictimASC);
 
@@ -230,4 +234,3 @@ FGameplayTag UGTGameplayAbility::CheckBlocking(const FGameplayTag IgnoreGuardTag
 
 	return GTGameplayTags::BlockingResult_Failure;
 }
-
