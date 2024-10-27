@@ -33,7 +33,7 @@ EGTDirection UGTBlueprintFunctionLibrary::CalculateDirectionType(const float Deg
 
 FVector UGTBlueprintFunctionLibrary::CalculateDirectionVector(const EGTDirection Direction)
 {
-	static TMap<EGTDirection, FVector> DirectionToVectorMap =
+	static const TMap<EGTDirection, FVector> DirectionToVectorMap =
 		{
 			{EGTDirection::None, FVector::ZeroVector},
 			{EGTDirection::Forward, FVector::ForwardVector},
