@@ -2,11 +2,10 @@
 [![Video Label](http://img.youtube.com/vi/5rWJYEPz2hc/0.jpg)](https://youtu.be/5rWJYEPz2hc)
 
 # 목표
-플레이어와 보스간의 **전투** 를 구현했습니다.
+플레이어와 보스간의 **전투**를 구현했습니다.
 
 # 구현 개요
-GameplayAbilitySystem기반으로 구현했고 모든 기능은 C++로 작성했습니다. UI, AnimBP는 제외
-
+GameplayAbilitySystem기반으로 구현했고 모든 기능은 C++로 작성했습니다.
 블루프린트는 프로퍼티 값만 할당하는 용도로 사용했습니다.
 
 ## 어빌리티
